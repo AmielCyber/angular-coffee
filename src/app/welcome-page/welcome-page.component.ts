@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
 
-import {APP_SETTINGS, appSettings, AppSettings} from '../app.settings';
+import {APP_SETTINGS, AppSettings} from '../app.settings';
 
 @Component({
   selector: 'app-welcome-page',
@@ -17,4 +17,3 @@ export class WelcomePageComponent {
     this.title = this.appSettings.title;
   }
 }
-export const WelcomePageTitle = appSettings.title;
