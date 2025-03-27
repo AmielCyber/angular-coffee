@@ -1,0 +1,32 @@
+<nav class="bg-base-100 opacity-90">
+  <ul class="navbar mx-auto max-w-screen-md">
+    <div class="navbar-start gap-6">
+      <li>
+        <a routerLink="{{LINK_TOKENS.HOME}}" routerLinkActive="link-secondary" [routerLinkActiveOptions]="{exact: true}"
+           class="link link-primary no-underline text-xl"
+        >
+          <span class="hidden">Home</span>
+          <div class="tooltip tooltip-right tooltip-accent pb-1" data-tip="Home" aria-hidden="true">
+            <app-coffee-icon/>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a routerLink="{{LINK_TOKENS.MENU}}" routerLinkActive="text-secondary"
+             class="link link-primary no-underline text-xl ">
+          Menu
+        </a>
+      </li>
+    </div>
+    <div class=" navbar-end menu menu-horizontal gap-6">
+      <li>
+        <!-- TODO Set Cart Button -->
+        <button class="btn btn-primary">Cart</button>
+      </li>
+      <li>
+        <!-- TODO Set Account Button -->
+        <button class="btn btn-primary">Account</button>
+      </li>
+    </div>
+  </ul>
+</nav>
