@@ -1,8 +1,8 @@
 import {ComponentFixture, TestBed, } from '@angular/core/testing';
 
 import { NotFoundPageComponent } from './not-found-page.component';
-import {provideRouter} from '@angular/router';
-import {ROUTER_TOKENS} from '../routes/router-tokens.model';
+import {provideRouter, Router} from '@angular/router';
+import {LINK_TOKENS, ROUTER_TOKENS} from '../routes/router-tokens.model';
 import {Component} from '@angular/core';
 
 @Component({template: ""})
@@ -44,5 +44,17 @@ describe('NotFoundPageComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const link: HTMLAnchorElement | null = compiled.querySelector('a');
     expect(link?.href).toContain(`/${ROUTER_TOKENS.HOME}`);
+  });
+  it('should have link that redirects user to home page', () => {
+    const router = TestBed.inject(Router);
+    const spyRouter = spyOn(router, "navigateByUrl");
+    const compiled = fixture.nativeElement as HTMLElement;
+    const link: HTMLAnchorElement | null = compiled.querySelector('a');
+    link?.click();
+    expect(link).toBeDefined();
+    expect(spyRouter).toHaveBeenCalledWith(
+      router.createUrlTree([LINK_TOKENS.HOME]),
+      jasmine.anything()
+    )
   });
 });

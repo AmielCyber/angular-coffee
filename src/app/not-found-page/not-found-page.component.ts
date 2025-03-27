@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterLink} from '@angular/router';
 
 import {ROUTER_TOKENS} from '../routes/router-tokens.model';
@@ -8,7 +8,8 @@ import {ROUTER_TOKENS} from '../routes/router-tokens.model';
   imports: [
     RouterLink
   ],
-  templateUrl: './not-found-page.component.html'
+  templateUrl: './not-found-page.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NotFoundPageComponent {
   readonly homeAddress = `/${ROUTER_TOKENS.HOME}`;
