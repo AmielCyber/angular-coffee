@@ -1,0 +1,20 @@
+<a routerLink="{{MENU_LINK}}" routerLinkActive="link-secondary"
+   (mouseenter)="onHover()"
+   (mouseleave)="onLeave()"
+   class="dropdown dropdown-hover dropdown-bottom dropdown-left link-primary link-accent"
+>
+  <div class="btn btn-ghost btn-circle hover:text-inherit indicator">
+    <span class="badge badge-sm indicator-item badge-secondary text-secondary-content">8</span>
+    <app-cart-icon/>
+  </div>
+  <section
+    class="dropdown-content bg-base-200 rounded-2xl z-1 mt-4 card-sm w-35 "
+    [attr.hidden]="dropDownHidden()"
+  >
+    <!-- TODO: Cart service functionality -->
+    <div class="card-body">
+      <h4 class="card-title text-primary">8 Items</h4>
+      <p class="text-info text-base">Total: $999</p>
+    </div>
+  </section>
+</a>
