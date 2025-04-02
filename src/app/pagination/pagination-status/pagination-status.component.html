@@ -1,0 +1,14 @@
+<article aria-label="Page Status" class="stats shadow">
+  <section class="stat place-items-center px-4 sm:px-6">
+    <h4 class="stat-title">Current Page</h4>
+    <p class="stat-value text-primary">{{ pagination().currentPage }}</p>
+  </section>
+  <section class="stat place-items-center px-4 sm:px-6">
+    <h4 class="stat-desc">Page Size</h4>
+    <p class="stat-value">{{ pagination().pageSize }}</p>
+  </section>
+  <section class="stat place-items-center px-4 sm:px-6">
+    <h4 class="stat-desc">Total Pages</h4>
+    <p class="stat-value text-secondary">{{ pagination().totalPages }}</p>
+  </section>
+</article>
