@@ -1,0 +1,20 @@
+<nav aria-label="pagination">
+  <ul class="join grid grid-cols-2 ml-auto mr-auto max-w-screen-md px-1 sm:px-0">
+    <li class="join-item">
+      <button class="btn btn-primary btn-wide btn-outline"
+              [disabled]="disablePrevious()"
+              (click)="prevPage.emit()"
+      >
+        Previous Page
+      </button>
+    </li>
+    <li class="join-item">
+      <button class="btn btn-secondary btn-wide btn-outline"
+              [disabled]="disableNext()"
+              (click)="nextPage.emit()"
+      >
+        Next Page
+      </button>
+    </li>
+  </ul>
+</nav>
